@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta itemprop="datePublished" content="Fri, 08 Mar 2024 08:08:08 +0100" id="date">
+    <meta itemprop="dateModified" content="Fri, 08 Mar 2024 08:08:08 +0100" id="last-modified">
+    <title>RustLogs (RLG) Library FAQ Guide - Essential Insights</title>
+
+    <!-- # Start Primary Meta Tags -->
+    <meta name="author" content="The RustLogs (RLG) Team">
+<meta name="description" content="Discover essential insights and solutions to frequently asked questions about the RustLogs (RLG) library, including features, usage, and how to contribute.">
+<meta name="generator" content="Shokunin SSG (version 0.0.26)">
+<meta name="keywords" content="RustLogs FAQ, Rust logging library, RLG features, RustLogs usage, RustLogs error handling, RustLogs macros, Rust project logging, RustLogs contributions, RustLogs support">
+<meta name="language" content="en-GB">
+<meta name="permalink" content="https://rustlogs.com/about/index.html">
+<meta name="rating" content="general">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="index, follow">
+<meta name="title" content="RustLogs (RLG) Library FAQ Guide - Essential Insights">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- # End Primary Meta Tags -->
+
+    <!-- # Start Open Graph / Facebook Meta Tags -->
+    <meta name="og:description" content="Discover essential insights and solutions to frequently asked questions about the RustLogs (RLG) library, including features, usage, and how to contribute.">
+<meta name="og:image" content="https://kura.pro/rlg/images/logos/rlg.webp">
+<meta name="og:image:alt" content="Image of RustLogs (RLG)">
+<meta name="og:image:height" content="100vh">
+<meta name="og:image:width" content="100vw">
+<meta name="og:locale" content="en_GB">
+<meta name="og:title" content="RustLogs (RLG) Library FAQ Guide - Essential Insights">
+<meta name="og:type" content="website">
+<meta name="og:url" content="https://rustlogs.com/about/index.html">
+    <!-- # End Open Graph / Facebook Meta Tags -->
+
+    <!-- # Start Accessibility Meta Tags -->
+    <meta name="accessibility" content="ARIA, fullKeyboardControl, noFlashingHazard" />
+    <!-- # End Accessibility Meta Tags -->
+
+    <!-- # Start Apple Meta Tags -->
+    <meta name="apple_mobile_web_app_orientations" content="portrait">
+<meta name="apple_touch_icon_sizes" content="192x192">
+    <!-- # End Apple Meta Tags -->
+
+<!-- # Start Content Security Policy Meta Tags -->
+<meta http-equiv="Content-Security-Policy"
+content="default-src 'self';
+  script-src 'self' 'unsafe-inline' 'unsafe-eval' *.google-analytics.com https://cdn.jsdelivr.net unpkg.com www.googletagmanager.com x.clarity.ms https://www.googletagmanager.com;
+  connect-src 'self' www.googletagmanager.com https://region1.google-analytics.com;
+  img-src 'self' data: https: kura.pro www.googletagmanager.com;
+  style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com;
+  font-src 'self' https://fonts.gstatic.com;
+  media-src 'self';" />
+<!-- # End Content Security Policy Meta Tags -->
+
+
+
+    <!-- # Start Microsoft Meta Tags -->
+    
+    <!-- # End Microsoft Meta Tags -->
+
+    <!-- # Start Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary">
+<meta name="twitter:creator" content="@wwdseb">
+<meta name="twitter:description" content="Discover essential insights and solutions to frequently asked questions about the RustLogs (RLG) library, including features, usage, and how to contribute.">
+<meta name="twitter:image" content="https://kura.pro/rlg/images/logos/rlg.webp">
+<meta name="twitter:image:alt" content="Image of RustLogs (RLG)">
+<meta name="twitter:site" content="@wwdseb">
+<meta name="twitter:title" content="RustLogs (RLG) Library FAQ Guide - Essential Insights">
+<meta name="twitter:url" content="https://rustlogs.com/about/index.html">
+    <!-- # End Twitter Meta Tags -->
+
+    <!-- # Start Links -->
+    <link rel="alternate" href="https://rustlogs.com/about/index.html" hreflang="en" />
+    <link rel="preload" as="image" href="https://kura.pro/stock/images/banners/thomas-tastet-0eqgB57xMeA.webp">
+    <link rel="canonical" href="https://rustlogs.com/about/index.html" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://kura.pro/rustlogs/images/favicon.ico"
+      sizes="16x16 32x32"
+    />
+    <link
+      as="style"
+      crossorigin="anonymous"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      onload="this.onload=null;this.rel='stylesheet'"
+      rel="preload"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="https://kura.pro/rustlogs/images/icons/192x192.png"
+      sizes="192x192"
+    />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
+    <!-- # End Links -->
+
+    <!-- # Start Styles -->
+    <style>
+      @keyframes dropDown{from{transform:translateY(-.618rem)}to{transform:translateY(0)}}@keyframes fadeIn{from{opacity:0}to{opacity:1}}.blur-light{backdrop-filter:saturate(180%) blur(20px);background-color:rgba(255,255,255,.618)}.card{overflow:hidden}.drop-down{animation:1.618s dropDown}.fade-in{animation:3s fadeIn}*{font-weight:300}pre{background:#f9f9f9;border:1px solid #ddd;border-left:3px solid var(--theme-color);color:#666;display:block;font-family:monospace;font-size:15px;line-height:1.618;margin-bottom:1.618em;max-width:100%;overflow:auto;padding:1em 1.618em;page-break-inside:avoid;word-wrap:break-word}.zoom-in{transition:transform .618s cubic-bezier(.618,1,.618,1)}.zoom-in:hover{transform:scale(1.0618)}.content .container{padding:30px 20px;box-shadow:2px 15px 20px #1f1f1f10,-2px -8px 20px #1f1f1f1a}.container .rollers{flex:0 0 230px}.container .start-roller{left:0;top:0;background-image:linear-gradient(to right,#fff 30%,transparent)}.container .end-roller,.container .start-roller{height:100%;width:40px;position:absolute;z-index:1}.container .end-roller{right:0;top:0;background-image:linear-gradient(to left,#fff 30%,transparent)}.container .rollers .wrapper{position:relative;width:1400px;height:100px;margin:0 0 20px;flex:0 0 auto}.container .rollers .wrapper .items-container{display:flex;align-items:center;position:absolute;width:200%;height:100%;animation-duration:16s;animation-iteration-count:infinite;animation-timing-function:linear}.container .rollers .wrapper .items-container.roll-LL{animation-name:roll}@keyframes roll{from{left:0}to{left:-100%}}.container .rollers .wrapper .items-container .item{flex:1 1 200px;min-width:0;margin:20px}.container .rollers .wrapper .items-container .item .company{filter:grayscale(100%);opacity:.2;width:100%;object-fit:contain}.container .rollers .wrapper .items-container .item .company:hover{filter:grayscale(0);opacity:1;cursor:not-allowed}.container img{vertical-align:middle}:root{--theme-color:rgb(167, 42, 0)}a{color:var(--theme-color);text-decoration:none}a:hover{text-decoration:underline}.active,.article-info,h1,h2,h3,h4,h5,h6,strong{font-weight:400}.article-info,h1,h2,h3,h4,h5,h6{color:var(--theme-color)}
+      .btn-theme{background-color:var(--theme-color);border-color:var(--theme-color);color: #fff;}
+      .btn-theme:hover,
+      .btn-theme:active,
+      .btn-theme:focus,
+      .btn-theme.active {
+        background-color:var(--theme-color);border-color:var(--theme-color);color: #fff;
+      }
+    </style>
+    <!-- # End Styles -->
+  </head>
+  <body
+    id="page-top"
+    itemscope
+    itemtype="http://schema.org/WebPage"
+    class="fw-light text-center bg-white text-start fs-6"
+  >
+    <!-- # Start Responsive navbar -->
+    <nav
+      class="navbar navbar-expand-lg bd-navbar sticky-top shadow-small border-bottom blur-light"
+      id="mainNav"
+      itemscope
+      itemtype="http://schema.org/SiteNavigationElement"
+    >
+    <div class="container-xxl p-3">
+      <a class="navbar-brand p-0 me-0 me-lg-2" href="/" aria-label="logo">
+        <img
+          class="d-inline-block align-top"
+          width="44"
+          height="44"
+          src="https://kura.pro/rlg/images/logos/rlg.webp"
+          alt="Logo of RustLogs (RLG)"
+          title="The Logo of RustLogs (RLG)"
+          loading="lazy"
+        />
+      </a>
+      <span class="fs-4" itemprop="name">RustLogs (RLG)</span>
+      <button
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          class="navbar-toggler"
+          data-bs-target="#navbarSupportedContent"
+          data-bs-toggle="collapse"
+          type="button"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav navbar-white ms-auto mb-2 bg-transparent">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="/index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="/getting-started/index.html">Getting Started</a>
+            </li>
+            <li class="nav-item">
+              <a
+              class="nav-link  active"
+              aria-current="page"
+              href="/faqs/index.html">FAQs</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                id="navbarDropdown"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                >Resources</a>
+              <ul
+                class="dropdown-menu dropdown-menu-end border border-info bg-white"
+                aria-labelledby="navbarDropdown"
+              >
+                <li>
+                  <a class="bg-transparent dropdown-item" href="/made-with-shokunin/index.html">Made with Shokunin</a>
+                </li>
+                <li>
+                  <a class="bg-transparent dropdown-item" href="/tags/index.html">Tags</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a
+                class="button btn btn-theme rounded-pill text-white"
+                aria-current="page"
+                href="/contact/index.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- # End Responsive navbar -->
+
+    <!-- Header-->
+    <header class="w-100 py-5 position-relative">
+      <img
+        alt="a screenshot of a computer"
+        aria-hidden="false"
+        class="fade-in position-absolute top-0 start-0 w-100 h-100"
+        data-has-animated="true"
+        data-show-type="fade-in"
+        height="100vh"
+        loading="lazy"
+        src="https://kura.pro/stock/images/banners/thomas-tastet-0eqgB57xMeA.webp"
+        style="object-fit: cover; z-index: -1;"
+        title="Image of a screenshot of a computer"
+        width="100vw"
+      />
+      <div class="text-center text-white center mx-auto rounded rounded-3 p-5"
+        style="
+          background-color: rgba(167, 42, 0, 0.618);
+          width: 61vw;
+          height: auto;
+          z-index: 1;">
+          <p class="display-2">RustLogs (RLG)</p>
+            <p class="lead fs-3">Simplify Logging in Rust with RustLogs (RLG): Flexible, Fast, and Easy to Use</p>
+      </div>
+    </header>
+    <!-- # End Header-->
+
+    <!-- Main content-->
+    <main id="main" class="bd-masthead fs-5 p-5" aria-label="main">
+      <div class="text-start justify-content-between"><h1 id="h1-rustlogs" tabindex="0" aria-label="Rustlogs Heading" itemprop="headline" class="rustlogs">RustLogs (RLG) Library FAQ Guide - Essential Insights</h1><p>Discover essential insights and solutions to frequently asked questions about the RustLogs (RLG) library, including features, usage, and how to contribute.</p><p></p><p>Welcome to the RustLogs (RLG) FAQ! Here, you'll find answers to common questions about the RustLogs library and its usage. If you don't find what you're looking for, feel free to <a href="https://github.com/sebastienrousseau/rlg/issues">open an issue</a> on our GitHub repository.</p>
+<p>RustLogs (RLG) is a Rust library offering application-level logging with intuitive APIs and helpful macros for ease of integration into Rust applications. It supports multiple log levels and formats, providing a versatile logging solution. This guide covers everything from adding RustLogs to your project, creating log entries, customizing log paths, using macros for simplified logging, handling errors, contributing to RustLogs, and finding further support.</p>
+<h2 id="h2-general" tabindex="0" aria-label="General Heading" itemprop="name" class="general">General</h2>
+<h3 id="h3-what" tabindex="0" aria-label="What Heading" itemprop="name" class="what">What is RustLogs (RLG)?</h3>
+<p>RustLogs (RLG) is an innovative Rust library tailored for application-level logging, offering a straightforward, readable output format. Designed to simplify logging tasks in Rust applications, it brings a blend of intuitive APIs and macros to the table, facilitating the integration of logging into your codebase effortlessly. RustLogs (RLG) supports multiple log levels, structured log formats, and a wide range of output formats, making it a versatile choice for logging in Rust applications.</p>
+<h3 id="h3-why" tabindex="0" aria-label="Why Heading" itemprop="name" class="why">Why should I use RustLogs (RLG)?</h3>
+<p>RustLogs (RLG) simplifies the process of adding logging functionality to your Rust applications. With its intuitive APIs and helpful macros, you can easily integrate logging into your codebase and gain valuable insights into your application's behaviour. RustLogs (RLG) supports multiple log levels, structured log formats, and a wide range of output formats, making it a versatile choice for logging in Rust applications.</p>
+<h3 id="h3-what" tabindex="0" aria-label="What Heading" itemprop="name" class="what">What are the key features of RustLogs (RLG)?</h3>
+<ul>
+<li><strong>Supports multiple log levels</strong>: <code>ALL</code>, <code>DEBUG</code>, <code>DISABLED</code>, <code>ERROR</code>, <code>FATAL</code>, <code>INFO</code>, <code>NONE</code>, <code>TRACE</code>, <code>VERBOSE</code>, and <code>WARNING</code></li>
+<li><strong>Structured log formats for easy parsing</strong>: Provides structured log formats that are easy to parse and filter</li>
+<li><strong>Wide compatibility with output formats</strong>: Compatible with various output formats, including CEF, ELF, GELF, JSON, CLF, W3C, Syslog, Apache Access Log, Logstash, Log4j XML, NDJSON, and more</li>
+<li><strong>Flexible configuration</strong>: Offers flexible configuration options for customizing log file path, log levels, and output formats</li>
+<li><strong>Asynchronous logging</strong>:Supports asynchronous logging for optimal performance and responsiveness</li>
+<li><strong>Useful macros to streamline logging tasks</strong>: Provides a set of helpful macros to simplify common logging tasks</li>
+</ul>
+<p><img src="https://kura.pro/common/images/elements/divider.svg" alt="divider" title="Divider" <p class="m-10 w-100"></p>
+<h2 id="h2-usage" tabindex="0" aria-label="Usage Heading" itemprop="name" class="usage">Usage</h2>
+<h3 id="h3-how" tabindex="0" aria-label="How Heading" itemprop="name" class="how">How do I add RustLogs (RLG) to my Rust project?</h3>
+<p>To add RustLogs (RLG) to your Rust project, simply add the following line to your <code>Cargo.toml</code> file:</p>
+<pre><code class="language-toml">[dependencies]
+rlg = &quot;0.0.3&quot;
+</code></pre>
+<h3 id="h3-how" tabindex="0" aria-label="How Heading" itemprop="name" class="how">How do I create a new log entry?</h3>
+<p>To create a new log entry using RustLogs (RLG), you can use the <code>Log::new()</code> function:</p>
+<pre><code class="language-rust">use rlg::log::Log;
+use rlg::log_format::LogFormat;
+use rlg::log_level::LogLevel;
+
+let log_entry = Log::new(
+    &quot;12345&quot;,
+    &quot;2023-01-01T12:00:00Z&quot;,
+    &amp;LogLevel::INFO,
+    &quot;MyComponent&quot;,
+    &quot;This is a sample log message&quot;,
+    &amp;LogFormat::JSON,
+);
+</code></pre>
+<h3 id="h3-how" tabindex="0" aria-label="How Heading" itemprop="name" class="how">How do I log a message asynchronously?</h3>
+<p>To log a message asynchronously using RustLogs (RLG), you can use the <code>log()</code> method on a log entry:</p>
+<pre><code class="language-rust">tokio::runtime::Runtime::new().unwrap().block_on(async {
+    log_entry.log().await.unwrap();
+});
+</code></pre>
+<h3 id="h3-how" tabindex="0" aria-label="How Heading" itemprop="name" class="how">How can I customize the log file path?</h3>
+<p>By default, RustLogs (RLG) logs to a file named &quot;RLG.log&quot; in the current directory. You can customize the log file path by setting the <code>LOG_FILE_PATH</code> environment variable:</p>
+<pre><code class="language-rust">std::env::set_var(&quot;LOG_FILE_PATH&quot;, &quot;/path/to/log/file.log&quot;);
+</code></pre>
+<p><img src="https://kura.pro/common/images/elements/divider.svg" alt="divider" title="Divider" <p class="m-10 w-100"></p>
+<h2 id="h2-macros" tabindex="0" aria-label="Macros Heading" itemprop="name" class="macros">Macros</h2>
+<h3 id="h3-what" tabindex="0" aria-label="What Heading" itemprop="name" class="what">What macros are available in RustLogs (RLG)?</h3>
+<p>RustLogs (RLG) provides several helpful macros to simplify common logging tasks:</p>
+<ul>
+<li><code>macro_log!</code>: Creates a new log entry with specified parameters.</li>
+<li><code>macro_info_log!</code>: Creates an info log with default session ID and format.</li>
+<li><code>macro_print_log!</code>: Prints a log to stdout.</li>
+<li><code>macro_log_to_file!</code>: Asynchronously logs a message to a file.</li>
+<li><code>macro_warn_log!</code>: Creates a warning log.</li>
+<li><code>macro_error_log!</code>: Creates an error log with default format.</li>
+<li><code>macro_set_log_format_clf!</code>: Sets the log format to CLF if not already defined.</li>
+<li><code>macro_debug_log!</code>: Conditionally logs a message based on the <code>debug_enabled</code> feature flag.</li>
+<li><code>macro_trace_log!</code>: Creates a trace log.</li>
+<li><code>macro_fatal_log!</code>: Creates a fatal log.</li>
+<li><code>macro_log_if!</code>: Conditionally logs a message based on a predicate.</li>
+<li><code>macro_log_with_metadata!</code>: Logs a message with additional metadata.</li>
+</ul>
+<h3>How do I use the <code>macro_log!</code> macro?</h3>
+<p>The <code>macro_log!</code> macro allows you to create a new log entry easily. Here's how you can use it:</p>
+<pre><code class="language-rust">let log = macro_log!(session_id, time, level, component, description, format);
+</code></pre>
+<h3>How do I use the <code>macro_info_log!</code> macro?</h3>
+<p>The <code>macro_info_log!</code> macro creates an info log with default session ID and format. Here's how you can use it:</p>
+<pre><code class="language-rust">let log = macro_info_log!(time, component, description);
+</code></pre>
+<h3 id="h3-how" tabindex="0" aria-label="How Heading" itemprop="name" class="how">How do I conditionally log a message based on a predicate?</h3>
+<p>You can use the <code>macro_log_if!</code> macro to conditionally log a message based on a predicate:</p>
+<pre><code class="language-rust">macro_log_if!(predicate, log);
+</code></pre>
+<p>If the <code>predicate</code> evaluates to <code>true</code>, the log message will be printed using <code>macro_print_log!</code>.</p>
+<p><img src="https://kura.pro/common/images/elements/divider.svg" alt="divider" title="Divider" <p class="m-10 w-100"></p>
+<h2 id="h2-error" tabindex="0" aria-label="Error Heading" itemprop="name" class="error">Error Handling</h2>
+<h3 id="h3-how" tabindex="0" aria-label="How Heading" itemprop="name" class="how">How does RustLogs (RLG) handle errors during logging operations?</h3>
+<p>Errors can occur during logging operations, such as file I/O errors or formatting errors. The <code>log()</code> method returns a <code>Result&lt;(), io::Error&gt;</code> that indicates the outcome of the logging operation. You should handle potential errors appropriately in your code:</p>
+<pre><code class="language-rust">match log_entry.log().await {
+    Ok(_) =&gt; println!(&quot;Log entry successfully written&quot;),
+    Err(err) =&gt; eprintln!(&quot;Error logging entry: {}&quot;, err),
+}
+</code></pre>
+<p><img src="https://kura.pro/common/images/elements/divider.svg" alt="divider" title="Divider" <p class="m-10 w-100"></p>
+<h2 id="h2-contributing" tabindex="0" aria-label="Contributing Heading" itemprop="name" class="contributing">Contributing</h2>
+<h3 id="h3-how" tabindex="0" aria-label="How Heading" itemprop="name" class="how">How can I contribute to RustLogs (RLG)?</h3>
+<p>We welcome contributions to RustLogs (RLG)! If you'd like to contribute, please follow these steps:</p>
+<ol>
+<li>Fork the <a href="https://github.com/sebastienrousseau/rlg">RustLogs (RLG) repository</a> on GitHub.</li>
+<li>Create a new branch for your feature or bug fix.</li>
+<li>Make your changes and ensure that the code builds successfully.</li>
+<li>Write tests to cover your changes, if applicable.</li>
+<li>Run the test suite to ensure that all tests pass.</li>
+<li>Commit your changes and push them to your forked repository.</li>
+<li>Open a pull request on the main RustLogs (RLG) repository, describing your changes and the problem they solve.</li>
+</ol>
+<p>We appreciate your contributions and will review your pull request as soon as possible.</p>
+<p><img src="https://kura.pro/common/images/elements/divider.svg" alt="divider" title="Divider" <p class="m-10 w-100"></p>
+<h2 id="h2-support" tabindex="0" aria-label="Support Heading" itemprop="name" class="support">Support</h2>
+<h3 id="h3-where" tabindex="0" aria-label="Where Heading" itemprop="name" class="where">Where can I find more information about RustLogs (RLG)?</h3>
+<p>For more information about RustLogs (RLG), you can refer to the following resources:</p>
+<ul>
+<li><a href="https://docs.rs/rlg">RustLogs (RLG) Documentation</a></li>
+<li><a href="https://github.com/sebastienrousseau/rlg">RustLogs (RLG) Repository</a></li>
+<li><a href="https://crates.io/crates/rlg">RustLogs (RLG) Crate</a></li>
+</ul>
+<h3 id="h3-how" tabindex="0" aria-label="How Heading" itemprop="name" class="how">How can I report a bug or request a feature?</h3>
+<p>If you encounter a bug or have a feature request for RustLogs (RLG), please <a href="https://github.com/sebastienrousseau/rlg/issues">open an issue</a> on our GitHub repository. Provide as much detail as possible about the problem or feature you're requesting, and we'll do our best to address it.</p>
+<h3 id="h3-how" tabindex="0" aria-label="How Heading" itemprop="name" class="how">How can I get help with using RustLogs (RLG)?</h3>
+<p>If you need help with using RustLogs (RLG), you can:</p>
+<ul>
+<li>Check the <a href="https://docs.rs/rlg">RustLogs (RLG) Documentation</a> for detailed usage instructions and examples.</li>
+<li>Search for existing issues or discussions on the <a href="https://github.com/sebastienrousseau/rlg">RustLogs (RLG) GitHub repository</a> to see if your question has already been answered.</li>
+<li>If you can't find a solution, feel free to <a href="https://github.com/sebastienrousseau/rlg/issues">open a new issue</a> on the GitHub repository, describing your problem or question in detail. We'll do our best to assist you.</li>
+</ul>
+<p>We hope this FAQ has been helpful in answering your questions about RustLogs (RLG). If you have any further inquiries or need additional assistance, please don't hesitate to reach out to us. Happy logging with RustLogs (RLG)!</p>
+</div>
+    </main>
+
+    <!-- Footer-->
+    <footer id="footer" aria-label="footer" class="footer border-top mt-auto py-3">
+      <span class="px-2">© 2024 RustLogs (RLG). All rights reserved.</span>
+      <p class="mb-0">
+        <span class="px-2"><a href="/privacy/index.html">Privacy & Cookie Policy</a></span>
+        <span class="px-2"><a href="/terms/index.html">Terms of Use</a></span>
+      </p>
+    </footer>
+
+    <script
+      async
+      crossorigin="anonymous"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      defer
+    ></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org/",
+        "@type": "WebPage",
+        "author": {
+          "@type": "Person",
+          "@id": "The RustLogs (RLG) Team"
+        },
+        "copyrightHolder": {
+          "@type": "Person",
+          "@id": "The RustLogs (RLG) Team"
+        },
+        "copyrightYear": "© 2024 RustLogs (RLG). All rights reserved.",
+        "creator": {
+          "@type": "Person",
+          "@id": "The RustLogs (RLG) Team"
+        },
+        "dateModified": "Fri, 08 Mar 2024 08:08:08 +0100",
+        "datePublished": "Fri, 08 Mar 2024 08:08:08 +0100",
+        "description": "Discover essential insights and solutions to frequently asked questions about the RustLogs (RLG) library, including features, usage, and how to contribute.",
+        "headline": "Simplify Logging in Rust with RustLogs (RLG): Flexible, Fast, and Easy to Use",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://kura.pro/rlg/images/logos/rlg.webp"
+        },
+        "inLanguage": "en-GB",
+        "mainEntityOfPage": "https://rustlogs.com/about/index.html",
+        "name": "RustLogs (RLG)",
+        "publisher": {
+          "@type": "Person",
+          "@id": "The RustLogs (RLG) Team"
+        }
+      }
+    </script>
+    <script type="module" defer>
+      // This is an Immediately Invoked Function Expression (IIFE) which helps
+      // to avoid declaring any globals.
+      (function () {
+        // Create a new script element
+        var script = document.createElement("script");
+
+        // Set the source of the script element to "/main.js".
+        // A timestamp is appended as a query string to ensure the browser
+        // always fetches the latest version of the script, bypassing the
+        // cache.
+        script.src = "/main.js";
+
+        // The script is of type "text/javascript"
+
+        // The script is set to execute asynchronously as soon as it's
+        //available
+
+        // Append the script element to the head of the document
+        document.head.appendChild(script);
+      })(); // The function is immediately invoked
+    </script>
+    <script>
+      // JavaScript code
+      var dropDownElements = document.querySelectorAll('.drop-down');
+      dropDownElements.forEach(function(element) {
+        element.classList.add('animate');
+      });
+
+      window.addEventListener('scroll', function() {
+        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        dropDownElements.forEach(function(element) {
+          if (scrollTop === 0) {
+            element.classList.add('animate');
+          } else {
+            element.classList.remove('animate');
+          }
+        });
+      });
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BQMFZ772M"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-6BQMFZ772M');
+    </script>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+/* TEAM */
+	Name: The RustLogs (RLG) Team
+	Website: https://rustlogs.com/index.html
+	Twitter: @wwdseb
+	Location: London, UK
+
+/* THANKS */
+	Thanks: Thanks for reading!
+
+/* SITE */
+	Last update: 2024-03-08
+	Standards: HTML5, CSS3, RSS, Atom, JSON, XML, YAML, Markdown, TOML
+	Components: Shokunin SSG, Shokunin CLI, Shokunin Templates, Kaishi Templates, Kaishi Themes
+	Software: Shokunin, Rust
