@@ -266,6 +266,10 @@ content="default-src 'self';
               <div class="invalid-feedback">Please enter your message.</div>
             </div>
             <div class="col-12">
+              <label class="sr-only" for="g-recaptcha-response">Google Recaptcha</label>
+              <div class="g-recaptcha" data-sitekey={{recaptcha}}></div>
+            </div>
+            <div class="col-12">
               <button
                 title="Send Message"
                 type="submit"
@@ -371,6 +375,9 @@ content="default-src 'self';
         });
       });
     </script>
+    <!-- Google reCAPTCHA -->
+    <script async defer src="https://www.google.com/recaptcha/api.js"></script>
+    <!-- #End Google reCAPTCHA -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id={{measurementID}}"></script>
     <script>
