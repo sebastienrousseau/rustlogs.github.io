@@ -141,8 +141,6 @@ RustLogs (RLG) simplifies the process of adding logging functionality to your Ru
 
 - **Helpful Macros**: The library provides a set of convenient macros that simplify common logging tasks, such as creating log entries, printing logs to stdout, logging to files, and conditionally logging based on feature flags or predicates.
 
-Certainly! Here's a CTA (Call to Action) that you can add at the end of the homepage to encourage users to get started with RustLogs (RLG):
-
 ![divider][divider].class="m-10 w-100"
 
 ## Get Started with RustLogs (RLG) Today
@@ -159,7 +157,7 @@ Dive into our comprehensive documentation to learn more about RustLogs (RLG)'s f
 
 ### 💬 Community Support
 
-Join our vibrant community of Rust developers and logging enthusiasts. Get help, share your experiences, and contribute to the future of RustLogs (RLG). Together, let's make logging better!
+Join our vibrant community of Rus t developers and logging enthusiasts. Get help, share your experiences, and contribute to the future of RustLogs (RLG). Together, let's make logging better!
 
 [**Get Started Now →**](/getting-started/index.html)
 
