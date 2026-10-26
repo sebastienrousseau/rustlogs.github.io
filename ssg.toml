@@ -3,7 +3,7 @@
 
 site_name = "rlg"
 site_title = "rlg: near-lock-free structured logging for Rust"
-site_description = "rlg (RustLogs) is a structured logging library for Rust: records leave the calling thread through a ring buffer, and a background thread formats them in one of 14 formats and writes them to os_log, journald, a file or stdout."
+site_description = "rlg (RustLogs) is a structured logging library for Rust: records leave the calling thread through a ring buffer, and a background thread formats them in one of 14 formats and writes them to os_log on macOS, journald on Linux or standard output."
 base_url = "https://rustlogs.com"
 language = "en-GB"
 
