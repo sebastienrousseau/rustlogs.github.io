@@ -1,2 +1,0 @@
-User-agent: *
-Sitemap: https://rustlogs.com/contact/index.html/sitemap.xml
