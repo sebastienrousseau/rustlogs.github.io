@@ -1,297 +1,266 @@
-<!DOCTYPE html>
-<html lang="{{language}}">
-  <head>
-    <meta charset="{{charset}}" />
-    <meta itemprop="datePublished" content="{{item_pub_date}}" id="date">
-    <meta itemprop="dateModified" content="{{last_build_date}}" id="last-modified">
-    <title>{{title}}</title>
-
-    <!-- # Start Primary Meta Tags -->
-    {{primary}}
-    <!-- # End Primary Meta Tags -->
-
-    <!-- # Start Open Graph / Facebook Meta Tags -->
-    {{opengraph}}
-    <!-- # End Open Graph / Facebook Meta Tags -->
-
-    <!-- # Start Accessibility Meta Tags -->
-    <meta name="accessibility" content="ARIA, fullKeyboardControl, noFlashingHazard" />
-    <!-- # End Accessibility Meta Tags -->
-
-    <!-- # Start Apple Meta Tags -->
-    {{apple}}
-    <!-- # End Apple Meta Tags -->
-
-<!-- # Start Content Security Policy Meta Tags -->
-<meta http-equiv="Content-Security-Policy"
-content="default-src 'self';
-  script-src 'self' 'unsafe-inline' 'unsafe-eval' *.google-analytics.com https://cdn.jsdelivr.net unpkg.com www.googletagmanager.com x.clarity.ms https://www.googletagmanager.com;
-  connect-src 'self' www.googletagmanager.com https://region1.google-analytics.com;
-  img-src 'self' data: https: kura.pro www.googletagmanager.com;
-  style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com;
-  font-src 'self' https://fonts.gstatic.com;
-  media-src 'self';" />
-<!-- # End Content Security Policy Meta Tags -->
-
-
-
-    <!-- # Start Microsoft Meta Tags -->
-    {{microsoft}}
-    <!-- # End Microsoft Meta Tags -->
-
-    <!-- # Start Twitter Meta Tags -->
-    {{twitter}}
-    <!-- # End Twitter Meta Tags -->
-
-    <!-- # Start Links -->
-    <link rel="alternate" href="{{url}}" hreflang="{{hreflang}}" />
-    <link rel="preload" as="image" href="{{banner}}">
-    <link rel="canonical" href="{{url}}" />
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="{{cdn}}/{{short_name}}/images/favicon.ico"
-      sizes="16x16 32x32"
-    />
-    <link
-      as="style"
-      crossorigin="anonymous"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
-      onload="this.onload=null;this.rel='stylesheet'"
-      rel="preload"
-    />
-    <link
-      rel="apple-touch-icon"
-      href="{{cdn}}/{{short_name}}/images/icons/{{apple_touch_icon_sizes}}.png"
-      sizes="{{apple_touch_icon_sizes}}"
-    />
-    <link rel="manifest" href="/manifest.json" />
-    <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
-    <!-- # End Links -->
-
-    <!-- # Start Styles -->
-    <style>
-      @keyframes dropDown{from{transform:translateY(-.618rem)}to{transform:translateY(0)}}@keyframes fadeIn{from{opacity:0}to{opacity:1}}.blur-light{backdrop-filter:saturate(180%) blur(20px);background-color:rgba(255,255,255,.618)}.card{overflow:hidden}.drop-down{animation:1.618s dropDown}.fade-in{animation:3s fadeIn}*{font-weight:300}pre{background:#f9f9f9;border:1px solid #ddd;border-left:3px solid var(--theme-color);color:#666;display:block;font-family:monospace;font-size:15px;line-height:1.618;margin-bottom:1.618em;max-width:100%;overflow:auto;padding:1em 1.618em;page-break-inside:avoid;word-wrap:break-word}.zoom-in{transition:transform .618s cubic-bezier(.618,1,.618,1)}.zoom-in:hover{transform:scale(1.0618)}.content .container{padding:30px 20px;box-shadow:2px 15px 20px #1f1f1f10,-2px -8px 20px #1f1f1f1a}.container .rollers{flex:0 0 230px}.container .start-roller{left:0;top:0;background-image:linear-gradient(to right,#fff 30%,transparent)}.container .end-roller,.container .start-roller{height:100%;width:40px;position:absolute;z-index:1}.container .end-roller{right:0;top:0;background-image:linear-gradient(to left,#fff 30%,transparent)}.container .rollers .wrapper{position:relative;width:1400px;height:100px;margin:0 0 20px;flex:0 0 auto}.container .rollers .wrapper .items-container{display:flex;align-items:center;position:absolute;width:200%;height:100%;animation-duration:16s;animation-iteration-count:infinite;animation-timing-function:linear}.container .rollers .wrapper .items-container.roll-LL{animation-name:roll}@keyframes roll{from{left:0}to{left:-100%}}.container .rollers .wrapper .items-container .item{flex:1 1 200px;min-width:0;margin:20px}.container .rollers .wrapper .items-container .item .company{filter:grayscale(100%);opacity:.2;width:100%;object-fit:contain}.container .rollers .wrapper .items-container .item .company:hover{filter:grayscale(0);opacity:1;cursor:not-allowed}.container img{vertical-align:middle}:root{--theme-color:rgb({{theme-color}})}a{color:var(--theme-color);text-decoration:none}a:hover{text-decoration:underline}.active,.article-info,h1,h2,h3,h4,h5,h6,strong{font-weight:400}.article-info,h1,h2,h3,h4,h5,h6{color:var(--theme-color)}
-      .btn-theme{background-color:var(--theme-color);border-color:var(--theme-color);color: #fff;}
-      .btn-theme:hover,
-      .btn-theme:active,
-      .btn-theme:focus,
-      .btn-theme.active {
-        background-color:var(--theme-color);border-color:var(--theme-color);color: #fff;
-      }
-    </style>
-    <!-- # End Styles -->
-  </head>
-  <body
-    id="page-top"
-    itemscope
-    itemtype="http://schema.org/WebPage"
-    class="fw-light text-center bg-white text-start fs-6"
-  >
-    <!-- # Start Responsive navbar -->
-    <nav
-      class="navbar navbar-expand-lg bd-navbar sticky-top shadow-small border-bottom blur-light"
-      id="mainNav"
-      itemscope
-      itemtype="http://schema.org/SiteNavigationElement"
-    >
-    <div class="container-xxl p-3">
-      <a class="navbar-brand p-0 me-0 me-lg-2" href="/" aria-label="logo">
-        <img
-          class="d-inline-block align-top"
-          width="{{logo_width}}"
-          height="{{logo_height}}"
-          src="{{logo}}"
-          alt="{{logo_alt}}"
-          title="The {{logo_alt}}"
-          loading="lazy"
-        />
-      </a>
-      <span class="fs-4" itemprop="name">{{name}}</span>
-      <button
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-          class="navbar-toggler"
-          data-bs-target="#navbarSupportedContent"
-          data-bs-toggle="collapse"
-          type="button"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav navbar-white ms-auto mb-2 bg-transparent">
-            <li class="nav-item">
-              <a
-                class="nav-link {{menu}}"
-                aria-current="page"
-                href="/index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="/getting-started/index.html">Getting Started</a>
-            </li>
-            <li class="nav-item">
-              <a
-              class="nav-link"
-              href="/faqs/index.html">FAQs</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                id="navbarDropdown"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-                >Resources</a>
-              <ul
-                class="dropdown-menu dropdown-menu-end border border-info bg-white"
-                aria-labelledby="navbarDropdown"
-              >
-                <li>
-                  <a class="bg-transparent dropdown-item" href="/made-with-shokunin/index.html">Made with Shokunin</a>
-                </li>
-                <li>
-                  <a class="bg-transparent dropdown-item" href="/tags/index.html">Tags</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a
-                class="button btn btn-theme rounded-pill text-white"
-                aria-current="page"
-                href="/contact/index.html">Contact</a>
-            </li>
-          </ul>
+{{#extends "base"}}
+{{#block "main"}}
+<section class="hero" aria-labelledby="hero-heading">
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow eyebrow-hero">{{eyebrow}}</p>
+      <h1 id="hero-heading">{{headline}}</h1>
+      <p class="lead hero-lead">{{lead}}</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="{{site_path}}getting-started/">Get started</a>
+        <a class="btn btn-hero-secondary" href="{{site_path}}features/">See what it does</a>
+      </div>
+    </div>
+    <!--
+      Three cards, each a fact from the rlg repository: the ring buffer
+      capacity (RING_BUFFER_CAPACITY in crates/rlg/src/engine.rs), the
+      rlg CLI converting errors to Elastic Common Schema (the command in
+      .github/demo.tape), and rlg-redact scrubbing a card number (the
+      example in crates/rlg-redact/README.md). Decorative, so hidden
+      from assistive technology: the same facts are in the page text.
+    -->
+    <div class="hero-stage" aria-hidden="true">
+      <div class="hero-glow"></div>
+      <div class="mock mock-treasury">
+        <div class="mock-row">
+          <svg class="mock-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12" /></svg>
+        </div>
+        <p class="mock-label">Ring buffer slots</p>
+        <strong class="mock-amount">65,536</strong>
+        <div class="mock-row">
+          <span class="mock-mono">Log::info(..).fire()</span>
+          <span class="mock-pill">no lock</span>
         </div>
       </div>
-    </nav>
-    <!-- # End Responsive navbar -->
+      <div class="mock mock-growth">
+        <p class="mock-label mock-label-clay">Errors, as ECS</p>
+        <strong class="mock-amount">14 formats <span class="mock-pill">rlg CLI</span></strong>
+        <div class="mock-row">
+          <span class="mock-mono">rlg --min-level error --format ecs</span>
+        </div>
+      </div>
+      <div class="mock mock-phone">
+        <span class="mock-notch"></span>
+        <div class="mock-notice">
+          <p class="mock-notice-title">redactor.scrub(log)</p>
+          <strong class="mock-notice-amount">card [REDACTED] declined</strong>
+          <p class="mock-notice-meta">email and client_ip redacted too</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-slope" aria-hidden="true"></div>
+</section>
 
-    <!-- Header-->
-    <header class="w-100 py-5 position-relative">
-      <img
-        alt="{{banner_alt}}"
-        aria-hidden="false"
-        class="fade-in position-relative top-0 start-0 w-75 h-75"
-        data-has-animated="true"
-        data-show-type="fade-in"
-        height="{{banner_height}}"
-        loading="lazy"
-        src="{{banner}}"
-        style="object-fit: cover; z-index: -1;"
-        title="The {{banner_alt}}"
-        width="{{banner_width}}"
-      />
-    </header>
-    <!-- # End Header-->
+<section class="section section-partners" aria-labelledby="targets-heading">
+  <div class="container">
+    <h2 class="section-label" id="targets-heading">Platforms and targets</h2>
+    <ul class="partners">
+      <li class="partner"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" /><line x1="8" y1="21" x2="16" y2="21" /><line x1="12" y1="17" x2="12" y2="21" /></svg><span>macOS: os_log</span></li>
+      <li class="partner"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" /><line x1="8" y1="21" x2="16" y2="21" /><line x1="12" y1="17" x2="12" y2="21" /></svg><span>Linux: journald</span></li>
+      <li class="partner"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" /><line x1="8" y1="21" x2="16" y2="21" /><line x1="12" y1="17" x2="12" y2="21" /></svg><span>Windows: stdout</span></li>
+      <li class="partner"><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" /></svg><span>WebAssembly</span></li>
+      <li class="partner"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" /><line x1="2" y1="12" x2="22" y2="12" /></svg><span>OpenTelemetry Collector</span></li>
+    </ul>
+  </div>
+</section>
 
-    <!-- Main content-->
-    <main id="main" class="bd-masthead fs-5 p-5" aria-label="main">
-      <div class="text-start justify-content-between">{{content}}</div>
-    </main>
+<section class="section" id="features" aria-labelledby="features-heading">
+  <div class="container stack">
+    <div class="section-head">
+      <p class="eyebrow">What it does</p>
+      <h2 id="features-heading">Structured logging that stays off your hot path</h2>
+      <p class="lead">Each card opens its section on the features page.</p>
+    </div>
+    <div class="grid grid-3">
+      <article class="card">
+        <span class="icon-badge badge-blue" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" /></svg></span>
+        <h3>Off the calling thread</h3>
+        <p>fire() checks the level and pushes the record into a 65,536-slot ring buffer. A background thread formats it and does the I/O.</p>
+        <a class="card-link" href="{{site_path}}features/#logging-off-the-calling-thread">How the engine works</a>
+      </article>
+      <article class="card">
+        <span class="icon-badge badge-green" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12" /></svg></span>
+        <h3>14 output formats</h3>
+        <p>JSON, NDJSON, ECS, GELF, Logstash, OTLP, MCP, logfmt, CLF, CEF, ELF, W3C, Apache and Log4j XML, chosen per record.</p>
+        <a class="card-link" href="{{site_path}}features/#fourteen-output-formats">See every format</a>
+      </article>
+      <article class="card">
+        <span class="icon-badge badge-clay" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" /><line x1="8" y1="21" x2="16" y2="21" /><line x1="12" y1="17" x2="12" y2="21" /></svg></span>
+        <h3>Native sinks</h3>
+        <p>Records go to os_log on macOS and journald on Linux, and to standard output everywhere else.</p>
+        <a class="card-link" href="{{site_path}}features/#native-sinks">Where records go</a>
+      </article>
+      <article class="card">
+        <span class="icon-badge badge-gold" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg></span>
+        <h3>Redaction</h3>
+        <p>rlg-redact scrubs card numbers, JWTs, bearer tokens, email and IPv4 addresses and AWS keys before a record is written.</p>
+        <a class="card-link" href="{{site_path}}features/#redacting-secrets-and-personal-data">What gets scrubbed</a>
+      </article>
+      <article class="card">
+        <span class="icon-badge badge-burgundy" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /><line x1="2" y1="12" x2="22" y2="12" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg></span>
+        <h3>OpenTelemetry export</h3>
+        <p>rlg-otlp ships records over OTLP/HTTP to a local OpenTelemetry Collector, which forwards them to your backend.</p>
+        <a class="card-link" href="{{site_path}}features/#export-to-opentelemetry">How export works</a>
+      </article>
+      <article class="card">
+        <span class="icon-badge badge-navy" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="4 17 10 11 4 5" /><line x1="12" y1="19" x2="20" y2="19" /></svg></span>
+        <h3>Logs for AI agents</h3>
+        <p>rlg-mcp serves log files to MCP clients as four tools, with a triage prompt, over stdio or HTTP.</p>
+        <a class="card-link" href="{{site_path}}features/#logs-for-ai-agents-over-mcp">What agents can ask</a>
+      </article>
+    </div>
+  </div>
+</section>
 
-    <!-- Footer-->
-    <footer id="footer" aria-label="footer" class="footer border-top mt-auto py-3">
-      <span class="px-2">{{copyright}}</span>
-      <p class="mb-0">
-        <span class="px-2"><a href="/privacy/index.html">Privacy & Cookie Policy</a></span>
-        <span class="px-2"><a href="/terms/index.html">Terms of Use</a></span>
-      </p>
-    </footer>
+<section class="section section-soft" id="tools" aria-labelledby="tools-heading">
+  <div class="container stack">
+    <div class="section-head">
+      <p class="eyebrow">Command-line tools</p>
+      <h2 id="tools-heading">Three binaries for the logs you already have</h2>
+      <p class="lead">Each installs with cargo install, or comes prebuilt in every GitHub release for macOS, Linux and Windows.</p>
+    </div>
+    <div class="grid grid-3">
+      <article class="card">
+        <p class="tag tag-green">rlg-cli</p>
+        <h3>rlg</h3>
+        <p>Filters records by level, component or attribute and converts them into any of the 14 formats.</p>
+        <a class="card-link" href="{{site_path}}features/#command-line-tools">Filter and convert</a>
+      </article>
+      <article class="card">
+        <p class="tag tag-blue">rlg-report</p>
+        <h3>rlg-report</h3>
+        <p>Summarises a log by level and component, ranks the most frequent messages and computes latency percentiles.</p>
+        <a class="card-link" href="{{site_path}}features/#command-line-tools">Summarise a log</a>
+      </article>
+      <article class="card">
+        <p class="tag tag-clay">rlg-mcp</p>
+        <h3>rlg-mcp</h3>
+        <p>An MCP server that lets an AI agent tail, filter and summarise log files. Also published as a container image.</p>
+        <a class="card-link" href="{{site_path}}features/#logs-for-ai-agents-over-mcp">Connect an agent</a>
+      </article>
+    </div>
+  </div>
+</section>
 
-    <script
-      async
-      crossorigin="anonymous"
-      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-      defer
-    ></script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org/",
-        "@type": "WebPage",
-        "author": {
-          "@type": "Person",
-          "@id": "{{author}}"
-        },
-        "copyrightHolder": {
-          "@type": "Person",
-          "@id": "{{author}}"
-        },
-        "copyrightYear": "{{copyright}}",
-        "creator": {
-          "@type": "Person",
-          "@id": "{{author}}"
-        },
-        "dateModified": "{{last_build_date}}",
-        "datePublished": "{{item_pub_date}}",
-        "description": "{{description}}",
-        "headline": "{{subtitle}}",
-        "image": {
-          "@type": "ImageObject",
-          "url": "{{image}}"
-        },
-        "inLanguage": "{{language}}",
-        "mainEntityOfPage": "{{permalink}}",
-        "name": "{{name}}",
-        "publisher": {
-          "@type": "Person",
-          "@id": "{{author}}"
-        }
-      }
-    </script>
-    <script type="module" defer>
-      // This is an Immediately Invoked Function Expression (IIFE) which helps
-      // to avoid declaring any globals.
-      (function () {
-        // Create a new script element
-        var script = document.createElement("script");
+<section class="section section-dark" id="developers" aria-labelledby="dev-heading">
+  <div class="container dev-grid">
+    <div class="dev-copy stack">
+      <p class="eyebrow eyebrow-clay">Install</p>
+      <h2 id="dev-heading">A structured record in a few lines of Rust</h2>
+      <p class="lead dev-lead">Initialise once, keep the guard, and fire records from anywhere. rlg needs Rust 1.88 or newer.</p>
+      <ul class="pills" aria-label="Ways to install rlg">
+        <li class="pill">cargo add rlg</li>
+        <li class="pill">cargo install rlg-cli</li>
+      </ul>
+      <div class="cta-row">
+        <a class="btn btn-hero-primary" href="{{site_path}}getting-started/">Read the getting started guide</a>
+      </div>
+    </div>
 
-        // Set the source of the script element to "/main.js".
-        // A timestamp is appended as a query string to ensure the browser
-        // always fetches the latest version of the script, bypassing the
-        // cache.
-        script.src = "/main.js";
+    <figure class="code-window">
+      <figcaption class="code-titlebar">
+        <span class="traffic" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="code-filename">src/main.rs</span>
+      </figcaption>
+      <pre class="code-body"><code><span class="syn-keyword">use</span> rlg::log::Log;
+<span class="syn-keyword">use</span> rlg::log_format::LogFormat;
 
-        // The script is of type "text/javascript"
+<span class="syn-keyword">fn</span> <span class="syn-function">main</span>() {
+    <span class="syn-comment">// Dropping the guard flushes pending records.</span>
+    <span class="syn-keyword">let</span> _guard = rlg::<span class="syn-function">init</span>().<span class="syn-function">unwrap</span>();
 
-        // The script is set to execute asynchronously as soon as it's
-        //available
+    Log::<span class="syn-function">info</span>(<span class="syn-string">"User authenticated"</span>)
+        .<span class="syn-function">component</span>(<span class="syn-string">"auth-service"</span>)
+        .<span class="syn-function">with</span>(<span class="syn-string">"user_id"</span>, <span class="syn-number">42</span>)
+        .<span class="syn-function">format</span>(LogFormat::JSON)
+        .<span class="syn-function">fire</span>();
+}</code></pre>
+    </figure>
+  </div>
+</section>
 
-        // Append the script element to the head of the document
-        document.head.appendChild(script);
-      })(); // The function is immediately invoked
-    </script>
-    <script>
-      // JavaScript code
-      var dropDownElements = document.querySelectorAll('.drop-down');
-      dropDownElements.forEach(function(element) {
-        element.classList.add('animate');
-      });
+<section class="section" id="trust" aria-labelledby="trust-heading">
+  <div class="container">
+    <div class="card governance-card">
+      <div class="stack">
+        <div class="eyebrow eyebrow-green">Security</div>
+        <h2 id="trust-heading">Checked by more than its own tests</h2>
+        <p class="lead">rlg runs its engine under Miri and Loom, fuzzes the inputs it parses, and signs what it releases.</p>
+        <p>rlg is at 0.0.x and has one maintainer: any release may break your build, and the security page lists what has and has not been checked.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="{{site_path}}security/">Read the security page</a>
+        </div>
+      </div>
+      <dl class="metrics">
+        <div class="metric">
+          <dt>Unsafe code</dt>
+          <dd>Denied</dd>
+        </div>
+        <div class="metric">
+          <dt>Fuzz targets</dt>
+          <dd>4</dd>
+        </div>
+        <div class="metric">
+          <dt>Release SBOMs</dt>
+          <dd>SPDX, CycloneDX</dd>
+        </div>
+        <div class="metric">
+          <dt>SBOM signing</dt>
+          <dd>Sigstore</dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+</section>
 
-      window.addEventListener('scroll', function() {
-        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-        dropDownElements.forEach(function(element) {
-          if (scrollTop === 0) {
-            element.classList.add('animate');
-          } else {
-            element.classList.remove('animate');
-          }
-        });
-      });
-    </script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id={{measurementID}}"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+<section class="section section-soft" id="scale" aria-labelledby="scale-heading">
+  <div class="container stack">
+    <div class="section-head section-head-centred">
+      <p class="eyebrow">In numbers</p>
+      <h2 id="scale-heading">What the workspace ships</h2>
+      <p class="lead mx-auto">Counted from the rlg repository at version 0.0.15.</p>
+    </div>
+    <dl class="grid grid-4 stats">
+      <div class="stat">
+        <dt>Output formats</dt>
+        <dd>14</dd>
+      </div>
+      <div class="stat">
+        <dt>Ring buffer slots</dt>
+        <dd>65,536</dd>
+      </div>
+      <div class="stat">
+        <dt>Minimum Rust version</dt>
+        <dd>1.88</dd>
+      </div>
+      <div class="stat">
+        <dt>Crates on crates.io</dt>
+        <dd>10</dd>
+      </div>
+    </dl>
+    <ul class="stream" aria-label="Crates in the rlg workspace">
+      <li class="stream-pill"><span class="status-dot" aria-hidden="true"></span>rlg: the engine</li>
+      <li class="stream-pill"><span class="status-dot" aria-hidden="true"></span>rlg-cli: the rlg binary</li>
+      <li class="stream-pill"><span class="status-dot" aria-hidden="true"></span>rlg-report: log summaries</li>
+      <li class="stream-pill"><span class="status-dot" aria-hidden="true"></span>rlg-mcp: MCP server</li>
+      <li class="stream-pill"><span class="status-dot" aria-hidden="true"></span>rlg-otlp: OTLP/HTTP export</li>
+      <li class="stream-pill"><span class="status-dot" aria-hidden="true"></span>rlg-redact: redaction</li>
+      <li class="stream-pill"><span class="status-dot" aria-hidden="true"></span>rlg-tower: tower access logs</li>
+      <li class="stream-pill"><span class="status-dot" aria-hidden="true"></span>rlg-test: test capture</li>
+      <li class="stream-pill"><span class="status-dot" aria-hidden="true"></span>rlg-wasm: WebAssembly</li>
+      <li class="stream-pill"><span class="status-dot" aria-hidden="true"></span>rlg-ebpf: process enrichment</li>
+    </ul>
+  </div>
+</section>
 
-      gtag('config', '{{measurementID}}');
-    </script>
-  </body>
-</html>
+<section class="section">
+  <div class="container stack">
+    <div class="prose">{{!content}}</div>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="{{site_path}}getting-started/">Get started</a>
+      <a class="btn btn-secondary" href="https://github.com/sebastienrousseau/rlg">Source on GitHub</a>
+    </div>
+  </div>
+</section>
+{{/block}}
